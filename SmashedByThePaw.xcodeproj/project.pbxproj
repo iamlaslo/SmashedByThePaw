@@ -8,12 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		2636A4082A99FF5200AC93CC /* SmashedByThePawApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2636A4072A99FF5200AC93CC /* SmashedByThePawApp.swift */; };
-		2636A40A2A99FF5200AC93CC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2636A4092A99FF5200AC93CC /* ContentView.swift */; };
 		2636A40C2A99FF5300AC93CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2636A40B2A99FF5300AC93CC /* Assets.xcassets */; };
 		2636A40F2A99FF5300AC93CC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2636A40E2A99FF5300AC93CC /* Preview Assets.xcassets */; };
 		2636A4192A99FF5300AC93CC /* SmashedByThePawTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2636A4182A99FF5300AC93CC /* SmashedByThePawTests.swift */; };
 		2636A4232A99FF5300AC93CC /* SmashedByThePawUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2636A4222A99FF5300AC93CC /* SmashedByThePawUITests.swift */; };
 		2636A4252A99FF5300AC93CC /* SmashedByThePawUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2636A4242A99FF5300AC93CC /* SmashedByThePawUITestsLaunchTests.swift */; };
+		2636A4332A9A007B00AC93CC /* EquipmentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2636A4322A9A007B00AC93CC /* EquipmentModel.swift */; };
+		2636A4352A9A049400AC93CC /* PersonnelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2636A4342A9A049400AC93CC /* PersonnelModel.swift */; };
+		2636A4372A9A04A200AC93CC /* EquipmentOryxModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2636A4362A9A04A200AC93CC /* EquipmentOryxModel.swift */; };
+		2636A4392A9A04B300AC93CC /* EquipmentCorrectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2636A4382A9A04B300AC93CC /* EquipmentCorrectionModel.swift */; };
+		2636A43C2A9A04CA00AC93CC /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2636A43B2A9A04CA00AC93CC /* String+Extensions.swift */; };
+		2636A43F2A9A050E00AC93CC /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2636A43E2A9A050E00AC93CC /* NetworkManager.swift */; };
+		2636A4412A9A06C500AC93CC /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2636A4402A9A06C500AC93CC /* HomeView.swift */; };
+		2636A4452A9A06E100AC93CC /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2636A4442A9A06E100AC93CC /* HomeViewModel.swift */; };
+		2636A4472A9A096600AC93CC /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2636A4462A9A096600AC93CC /* Log.swift */; };
+		2636A4492A9A21B700AC93CC /* TotalPersonnelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2636A4482A9A21B700AC93CC /* TotalPersonnelModel.swift */; };
+		2636A44C2A9A2B4800AC93CC /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2636A44B2A9A2B4800AC93CC /* Images.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +46,6 @@
 /* Begin PBXFileReference section */
 		2636A4042A99FF5200AC93CC /* SmashedByThePaw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmashedByThePaw.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2636A4072A99FF5200AC93CC /* SmashedByThePawApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmashedByThePawApp.swift; sourceTree = "<group>"; };
-		2636A4092A99FF5200AC93CC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2636A40B2A99FF5300AC93CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2636A40E2A99FF5300AC93CC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2636A4142A99FF5300AC93CC /* SmashedByThePawTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmashedByThePawTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +53,17 @@
 		2636A41E2A99FF5300AC93CC /* SmashedByThePawUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmashedByThePawUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2636A4222A99FF5300AC93CC /* SmashedByThePawUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmashedByThePawUITests.swift; sourceTree = "<group>"; };
 		2636A4242A99FF5300AC93CC /* SmashedByThePawUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmashedByThePawUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2636A4322A9A007B00AC93CC /* EquipmentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquipmentModel.swift; sourceTree = "<group>"; };
+		2636A4342A9A049400AC93CC /* PersonnelModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonnelModel.swift; sourceTree = "<group>"; };
+		2636A4362A9A04A200AC93CC /* EquipmentOryxModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquipmentOryxModel.swift; sourceTree = "<group>"; };
+		2636A4382A9A04B300AC93CC /* EquipmentCorrectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquipmentCorrectionModel.swift; sourceTree = "<group>"; };
+		2636A43B2A9A04CA00AC93CC /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		2636A43E2A9A050E00AC93CC /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		2636A4402A9A06C500AC93CC /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		2636A4442A9A06E100AC93CC /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		2636A4462A9A096600AC93CC /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		2636A4482A9A21B700AC93CC /* TotalPersonnelModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalPersonnelModel.swift; sourceTree = "<group>"; };
+		2636A44B2A9A2B4800AC93CC /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,9 +114,13 @@
 		2636A4062A99FF5200AC93CC /* SmashedByThePaw */ = {
 			isa = PBXGroup;
 			children = (
+				2636A43D2A9A050300AC93CC /* Networking */,
+				2636A43A2A9A04BF00AC93CC /* Extensions */,
+				2636A4312A99FFD700AC93CC /* Models */,
 				2636A4072A99FF5200AC93CC /* SmashedByThePawApp.swift */,
-				2636A4092A99FF5200AC93CC /* ContentView.swift */,
-				2636A40B2A99FF5300AC93CC /* Assets.xcassets */,
+				2636A4462A9A096600AC93CC /* Log.swift */,
+				2636A4422A9A06D100AC93CC /* Screens */,
+				2636A44A2A9A2B3E00AC93CC /* Assets */,
 				2636A40D2A99FF5300AC93CC /* Preview Content */,
 			);
 			path = SmashedByThePaw;
@@ -125,6 +149,60 @@
 				2636A4242A99FF5300AC93CC /* SmashedByThePawUITestsLaunchTests.swift */,
 			);
 			path = SmashedByThePawUITests;
+			sourceTree = "<group>";
+		};
+		2636A4312A99FFD700AC93CC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2636A4322A9A007B00AC93CC /* EquipmentModel.swift */,
+				2636A4342A9A049400AC93CC /* PersonnelModel.swift */,
+				2636A4362A9A04A200AC93CC /* EquipmentOryxModel.swift */,
+				2636A4382A9A04B300AC93CC /* EquipmentCorrectionModel.swift */,
+				2636A4482A9A21B700AC93CC /* TotalPersonnelModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2636A43A2A9A04BF00AC93CC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2636A43B2A9A04CA00AC93CC /* String+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2636A43D2A9A050300AC93CC /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				2636A43E2A9A050E00AC93CC /* NetworkManager.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		2636A4422A9A06D100AC93CC /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				2636A4432A9A06D600AC93CC /* Home */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		2636A4432A9A06D600AC93CC /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				2636A4402A9A06C500AC93CC /* HomeView.swift */,
+				2636A4442A9A06E100AC93CC /* HomeViewModel.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		2636A44A2A9A2B3E00AC93CC /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				2636A40B2A99FF5300AC93CC /* Assets.xcassets */,
+				2636A44B2A9A2B4800AC93CC /* Images.swift */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,7 +335,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2636A40A2A99FF5200AC93CC /* ContentView.swift in Sources */,
+				2636A4412A9A06C500AC93CC /* HomeView.swift in Sources */,
+				2636A44C2A9A2B4800AC93CC /* Images.swift in Sources */,
+				2636A4452A9A06E100AC93CC /* HomeViewModel.swift in Sources */,
+				2636A4472A9A096600AC93CC /* Log.swift in Sources */,
+				2636A4332A9A007B00AC93CC /* EquipmentModel.swift in Sources */,
+				2636A4392A9A04B300AC93CC /* EquipmentCorrectionModel.swift in Sources */,
+				2636A4372A9A04A200AC93CC /* EquipmentOryxModel.swift in Sources */,
+				2636A43F2A9A050E00AC93CC /* NetworkManager.swift in Sources */,
+				2636A4352A9A049400AC93CC /* PersonnelModel.swift in Sources */,
+				2636A43C2A9A04CA00AC93CC /* String+Extensions.swift in Sources */,
+				2636A4492A9A21B700AC93CC /* TotalPersonnelModel.swift in Sources */,
 				2636A4082A99FF5200AC93CC /* SmashedByThePawApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -425,11 +513,13 @@
 				DEVELOPMENT_TEAM = 6MQUAHZMJ9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.news";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -437,6 +527,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.laslo.SmashedByThePaw;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -454,11 +547,13 @@
 				DEVELOPMENT_TEAM = 6MQUAHZMJ9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.news";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -466,6 +561,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.laslo.SmashedByThePaw;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

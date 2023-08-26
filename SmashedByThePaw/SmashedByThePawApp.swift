@@ -9,9 +9,10 @@ import SwiftUI
 
 @main
 struct SmashedByThePawApp: App {
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeView()
         }
     }
 }
