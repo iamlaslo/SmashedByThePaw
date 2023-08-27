@@ -73,6 +73,8 @@ struct DetailsView: View {
     }
 }
 
-#Preview {
-    DetailsView(type: .aircrafts, models: [])
+struct DetailsView_Preview: PreviewProvider {
+    static var previews: some View {
+        DetailsView(type: .aircrafts, models: [])
+    }
 }

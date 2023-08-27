@@ -80,3 +80,13 @@ struct EquipmentCellView: View {
             }
     }
 }
+
+struct EquipmentCellView_Preview: PreviewProvider {
+    static var previews: some View {
+        EquipmentCellView(
+            type: .aircrafts,
+            count: 3,
+            increasement: 1
+        )
+    }
+}

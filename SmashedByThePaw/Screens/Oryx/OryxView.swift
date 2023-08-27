@@ -135,3 +135,9 @@ struct OryxView: View {
         let _ = self.personnelCountTimer.connect()
     }
 }
+
+struct OryxView_Preview: PreviewProvider {
+    static var previews: some View {
+        OryxView()
+    }
+}

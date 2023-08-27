@@ -29,7 +29,7 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <TestPlans>
          <TestPlanReference
-            reference = "container:SmashedByThePaw.xctestplan"
+            reference = "container:SmashedByThePawTests/SmashedByThePaw.xctestplan"
             default = "YES">
          </TestPlanReference>
       </TestPlans>
