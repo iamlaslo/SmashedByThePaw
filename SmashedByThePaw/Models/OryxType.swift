@@ -27,7 +27,7 @@ enum OryxType: String, Codable, CaseIterable {
         case .aircrafts:
             return Image.custom.aircraft
         case .antiAircraftWarfareSystems:
-            return Image("")
+            return Image.custom.aaws
         case .armouredPersonnelCarriers:
             return Image.custom.armouredVehicle
         case .artillerySystems:

@@ -36,26 +36,12 @@ struct CalendarView: View {
     
     var body: some View {
         ZStack {
-            LinearGradient(
-                colors: [.custom.lightGreen, .custom.midGreen],
-                startPoint: .top,
-                endPoint: .bottom
-            )
-                .ignoresSafeArea()
+            self.backgroundGradientView
+            self.contentView
             
-            VStack {
-                ZStack {
-                    Rectangle()
-                    self.datePicker
-                }
-                .foregroundColor(.custom.lightGreen)
-                .opacity(0.6)
-                .background(.ultraThinMaterial)
-                .shadow(color: .black.opacity(0.2), radius: 16, x: 0, y: 0)
-                
-                self.statsView
+            if self.viewModel.isLoading {
+                self.loaderView
             }
-            .ignoresSafeArea(edges: .top)
         }
         
         .onChange(of: self.viewModel.equipment) { newEquipment in
@@ -64,6 +50,41 @@ struct CalendarView: View {
     }
     
     // MARK: - Views
+    
+    private var loaderView: some View {
+        ZStack {
+            Color.black.opacity(0.3)
+                .background(.ultraThinMaterial)
+            ProgressView()
+                .progressViewStyle(.circular)
+        }
+        .ignoresSafeArea()
+    }
+    
+    private var backgroundGradientView: some View {
+        LinearGradient(
+            colors: [.custom.lightGreen, .custom.midGreen],
+            startPoint: .top,
+            endPoint: .bottom
+        )
+            .ignoresSafeArea()
+    }
+    
+    private var contentView: some View {
+        VStack {
+            ZStack {
+                Rectangle()
+                self.datePicker
+            }
+            .foregroundColor(.custom.lightGreen)
+            .opacity(0.6)
+            .background(.ultraThinMaterial)
+            .shadow(color: .black.opacity(0.2), radius: 16, x: 0, y: 0)
+            
+            self.statsView
+        }
+        .ignoresSafeArea(edges: .top)
+    }
     
     private var datePicker: some View {
         DatePicker(

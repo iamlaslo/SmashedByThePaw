@@ -13,6 +13,7 @@ final class CalendarViewModel: ObservableObject {
     // MARK: - Variables
     
     @Published private(set) var equipment: [EquipmentModel] = []
+    @Published private(set) var isLoading = true
     
     let networkManager: NetworkManager
     
@@ -22,6 +23,7 @@ final class CalendarViewModel: ObservableObject {
         self.networkManager = networkManager
         Task {
             await self.fetchEquipment()
+            self.isLoading = false
         }
     }
     

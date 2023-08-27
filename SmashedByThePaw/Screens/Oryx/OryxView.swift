@@ -16,7 +16,6 @@ struct OryxView: View {
     @State private var personnelCountTimer = Timer.publish(every: 2.5, on: .main, in: .common)
     
     private var gridColumns: [GridItem] {
-        // Switch device
         return Array(repeating: GridItem(spacing: 15), count: 2)
     }
     
@@ -24,34 +23,11 @@ struct OryxView: View {
     
     var body: some View {
         ZStack {
-            LinearGradient(
-                colors: [.custom.lightGreen, .custom.midGreen],
-                startPoint: .top,
-                endPoint: .bottom
-            )
-                .ignoresSafeArea()
+            self.backgroundGradientView
+            self.contentView
             
-            ZStack(alignment: .top) {
-                VStack {
-                    self.equipmentGrid
-                        .padding(.vertical, 30)
-                }
-                .padding(.horizontal, 20)
-                .ignoresSafeArea()
-                
-                ZStack {
-                    Rectangle()
-                        .foregroundColor(.custom.lightGreen)
-                        .opacity(0.6)
-                        .frame(height: 200)
-                        .background(.ultraThinMaterial)
-                        .shadow(color: .black.opacity(0.2), radius: 16, x: 0, y: 0)
-                    
-                    self.personnelCountView
-                        .offset(y: 30)
-                }
-                .frame(height: 200)
-                .ignoresSafeArea(edges: .top)
+            if self.viewModel.isLoading {
+                self.loaderView
             }
         }
         .navigationDestination(for: OryxType.self) { selectedType in
@@ -66,11 +42,55 @@ struct OryxView: View {
     
     // MARK: - Views
     
+    private var loaderView: some View {
+        ZStack {
+            Color.black.opacity(0.3)
+                .background(.ultraThinMaterial)
+            ProgressView()
+                .progressViewStyle(.circular)
+        }
+        .ignoresSafeArea()
+    }
+    
+    private var backgroundGradientView: some View {
+        LinearGradient(
+            colors: [.custom.lightGreen, .custom.midGreen],
+            startPoint: .top,
+            endPoint: .bottom
+        )
+            .ignoresSafeArea()
+    }
+    
+    private var contentView: some View {
+        ZStack(alignment: .top) {
+            VStack {
+                self.equipmentGrid
+                    .padding(.vertical, 30)
+            }
+            .padding(.horizontal, 20)
+            .ignoresSafeArea()
+            
+            ZStack {
+                Rectangle()
+                    .foregroundColor(.custom.lightGreen)
+                    .opacity(0.6)
+                    .frame(height: 200)
+                    .background(.ultraThinMaterial)
+                    .shadow(color: .black.opacity(0.2), radius: 16, x: 0, y: 0)
+                
+                self.personnelCountView
+                    .offset(y: 30)
+            }
+            .frame(height: 200)
+            .ignoresSafeArea(edges: .top)
+        }
+    }
+    
     private var personnelCountView: some View {
         VStack(spacing: 5) {
             Text("\(self.personnelCount)")
                 .font(.largeTitle.bold())
-                .foregroundColor(.custom.yellow)
+                .foregroundColor(.custom.white)
                 .monospacedDigit()
                 .animation(.linear, value: self.personnelCount)
                 .onChange(of: self.viewModel.totalPersonnel) { newValue in
@@ -86,7 +106,7 @@ struct OryxView: View {
             
             Text("Personnel")
                 .font(.title2)
-                .foregroundColor(.custom.yellow)
+                .foregroundColor(.custom.white)
         }
         
     }

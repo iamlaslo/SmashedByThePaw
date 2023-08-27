@@ -67,7 +67,7 @@ struct DetailsView: View {
             
             Text("\(model.losses)")
                 .font(.title3)
-                .foregroundColor(.custom.yellow)
+                .foregroundColor(.custom.white)
         }
         .listRowBackground(Color.clear)
     }

@@ -13,6 +13,10 @@ extension Image {
             Image("oryxTabIcon")
         }
         
+        static var aaws: Image {
+            Image("aaws")
+        }
+        
         static var aircraft: Image {
             Image("aircraft")
         }

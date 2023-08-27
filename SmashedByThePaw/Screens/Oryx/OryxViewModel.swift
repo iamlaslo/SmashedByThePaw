@@ -15,6 +15,7 @@ final class OryxViewModel: ObservableObject {
     @Published private(set) var totalPersonnel: Int?
     @Published private(set) var equipment: [EquipmentModel] = []
     @Published private(set) var oryx: Oryx?
+    @Published private(set) var isLoading = true
     
     let networkManager: NetworkManager
     
@@ -23,9 +24,12 @@ final class OryxViewModel: ObservableObject {
     init(networkManager: NetworkManager) {
         self.networkManager = networkManager
         Task {
-            await self.fetchTotalPersonnel()
-            await self.fetchEquipment()
-            await self.fetchOryx()
+            await withTaskGroup(of: Void.self) { _ in
+                await self.fetchTotalPersonnel()
+                await self.fetchEquipment()
+                await self.fetchOryx()
+                self.isLoading = false
+            }
         }
     }
     

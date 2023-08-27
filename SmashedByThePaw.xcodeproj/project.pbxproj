@@ -96,7 +96,6 @@
 		2636A3FB2A99FF5200AC93CC = {
 			isa = PBXGroup;
 			children = (
-				260C4E562A9BE1DA00260F93 /* SmashedByThePaw.xctestplan */,
 				2636A4062A99FF5200AC93CC /* SmashedByThePaw */,
 				2636A4172A99FF5300AC93CC /* SmashedByThePawTests */,
 				2636A4052A99FF5200AC93CC /* Products */,
@@ -115,11 +114,10 @@
 		2636A4062A99FF5200AC93CC /* SmashedByThePaw */ = {
 			isa = PBXGroup;
 			children = (
+				2636A4072A99FF5200AC93CC /* SmashedByThePawApp.swift */,
 				2636A43D2A9A050300AC93CC /* Networking */,
 				2636A43A2A9A04BF00AC93CC /* Extensions */,
 				2636A4312A99FFD700AC93CC /* Models */,
-				2636A4072A99FF5200AC93CC /* SmashedByThePawApp.swift */,
-				2636A4462A9A096600AC93CC /* Log.swift */,
 				2636A4422A9A06D100AC93CC /* Screens */,
 				2636A44A2A9A2B3E00AC93CC /* Assets */,
 				2636A40D2A99FF5300AC93CC /* Preview Content */,
@@ -138,6 +136,7 @@
 		2636A4172A99FF5300AC93CC /* SmashedByThePawTests */ = {
 			isa = PBXGroup;
 			children = (
+				260C4E562A9BE1DA00260F93 /* SmashedByThePaw.xctestplan */,
 				260C4E542A9BE13200260F93 /* CalendarViewModelTests.swift */,
 				260C4E522A9BE11E00260F93 /* OryxViewModelTests.swift */,
 				260C4E4E2A9BE0E100260F93 /* EquipmentModelTests.swift */,
@@ -163,6 +162,7 @@
 		2636A43A2A9A04BF00AC93CC /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				2636A4462A9A096600AC93CC /* Log.swift */,
 				2636A43B2A9A04CA00AC93CC /* String+Extensions.swift */,
 			);
 			path = Extensions;
@@ -497,12 +497,14 @@
 				DEVELOPMENT_TEAM = 6MQUAHZMJ9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = SBTP;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.news";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -517,7 +519,7 @@
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -532,12 +534,14 @@
 				DEVELOPMENT_TEAM = 6MQUAHZMJ9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = SBTP;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.news";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -552,7 +556,7 @@
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

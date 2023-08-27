@@ -36,7 +36,8 @@ struct EquipmentCellView: View {
                 Spacer()
                 self.infoView
             }
-            .padding()
+            .padding([.leading, .top, .bottom], 15)
+            .padding(.trailing, 12)
         }
         .aspectRatio(1, contentMode: .fit)
     }
@@ -46,14 +47,13 @@ struct EquipmentCellView: View {
     private var backgroundView: some View {
         RoundedRectangle(cornerRadius: 25, style: .continuous)
             .foregroundColor(.clear)
-//            .opacity(0.2)
     }
     
     private var iconView: some View {
         self.type.icon
             .resizable()
             .scaledToFit()
-            .frame(height: 75)
+            .frame(height: 60)
             .foregroundColor(.custom.white)
     }
     
@@ -71,7 +71,6 @@ struct EquipmentCellView: View {
     private var increasementView: some View {
         Text("+\(self.increasement)")
             .monospacedDigit()
-            .italic()
             .foregroundColor(.custom.white)
             .padding(.horizontal, 10)
             .background {
