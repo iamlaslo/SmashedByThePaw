@@ -15,9 +15,10 @@ struct EquipmentModel: Decodable, Hashable, Identifiable {
         self.rawDate
     }
     
-    let rawDate: String
+    var rawDate: String
     var date: Date? {
-        self.rawDate.asDate()
+        let result = self.rawDate.asDate()
+        return result
     }
     
     let day: Int
@@ -87,6 +88,20 @@ struct EquipmentModel: Decodable, Hashable, Identifiable {
         {
             self.totalVehiclesAndFuelTanks = militaryAuto + fuelTank
         }
+    }
+    
+    init(date: String = "2012-12-12", count: Int) {
+        self.rawDate = date
+        self.day = 1
+        self.aircraft = count
+        self.helicopter = count
+        self.tank = count
+        self.apc = count
+        self.artillery = count
+        self.mrl = count
+        self.drone = count
+        self.navalShip = count
+        self.aaw = count
     }
     
     // MARK: - Methods

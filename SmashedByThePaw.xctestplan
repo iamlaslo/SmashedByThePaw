@@ -1,0 +1,29 @@
+{
+  "configurations" : [
+    {
+      "id" : "8783B32A-A4CA-4C2E-8F9C-A67D32BBF392",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:SmashedByThePaw.xcodeproj",
+      "identifier" : "2636A4032A99FF5200AC93CC",
+      "name" : "SmashedByThePaw"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:SmashedByThePaw.xcodeproj",
+        "identifier" : "2636A4132A99FF5300AC93CC",
+        "name" : "SmashedByThePawTests"
+      }
+    }
+  ],
+  "version" : 1
+}

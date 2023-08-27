@@ -7,22 +7,7 @@
 
 import Foundation
 
-enum OryxType: String, Codable {
-    case aircrafts = "Aircrafts"
-    case antiAircraftWarfareSystems = "Anti-aircraft Warfare Systems"
-    case armouredPersonnelCarriers = "Armoured Personnel Carriers"
-    case artillerySystems = "Artillery Systems"
-    case helicopters = "Helicopters"
-    case multipleRocketLaunchers = "Multiple Rocket Launchers"
-    case specialEquipment = "Special Equipment"
-    case tanks = "Tanks"
-    case unmannedAerialVehicles = "Unmanned Aerial Vehicles"
-    case vehicleAndFuelTank = "Vehicle and Fuel Tank"
-    case warshipsBoats = "Warships, Boats"
-}
-
 struct Oryx {
-    
     var data: [EquipmentOryxModel]
     
     func total(of selectedType: OryxType) -> Int {
@@ -34,17 +19,42 @@ struct Oryx {
     }
 }
 
-struct EquipmentOryxModel: Codable, Hashable, Identifiable {
+struct ModelWithLosses: Identifiable, Hashable {
+    let id = UUID()
+    var model: String
+    var losses: Int
+}
+
+enum OryxManufacturer: String, Codable {
+    case iran = "Iran"
+    case israel = "Israel"
+    case italy = "Italy"
+    case poland = "Poland"
+    case russia = "Russia"
+    case theCzechRepublic = "the Czech Republic"
+    case theSovietUnion = "the Soviet Union"
     
-    enum Manufacturer: String, Codable {
-        case iran = "Iran"
-        case israel = "Israel"
-        case italy = "Italy"
-        case poland = "Poland"
-        case russia = "Russia"
-        case theCzechRepublic = "the Czech Republic"
-        case theSovietUnion = "the Soviet Union"
+    var title: String {
+        switch self {
+        case .iran:
+            return self.rawValue
+        case .israel:
+            return self.rawValue
+        case .italy:
+            return self.rawValue
+        case .poland:
+            return self.rawValue
+        case .russia:
+            return self.rawValue.lowercased()
+        case .theCzechRepublic:
+            return "Czech Republic"
+        case .theSovietUnion:
+            return "soviet union"
+        }
     }
+}
+
+struct EquipmentOryxModel: Codable, Hashable, Identifiable {
  
     // MARK: - Properties
     
@@ -52,7 +62,7 @@ struct EquipmentOryxModel: Codable, Hashable, Identifiable {
     
     let oryx: String
     let model: String
-    let manufacturer: Manufacturer
+    let manufacturer: OryxManufacturer
     let lossesTotal: Int
     let equipmentType: OryxType
     
