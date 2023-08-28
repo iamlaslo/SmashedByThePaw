@@ -32,6 +32,9 @@
 		26A4C18C2A9B978C003C7F26 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A4C18B2A9B978C003C7F26 /* CalendarView.swift */; };
 		26A4C18E2A9B997F003C7F26 /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A4C18D2A9B997F003C7F26 /* CalendarViewModel.swift */; };
 		26A4C1902A9B9FA0003C7F26 /* EquipmentDayData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A4C18F2A9B9FA0003C7F26 /* EquipmentDayData.swift */; };
+		26CA76A12A9C5886002639EF /* Oryx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CA76A02A9C5886002639EF /* Oryx.swift */; };
+		26CA76A32A9C5892002639EF /* ModelWithLosses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CA76A22A9C5892002639EF /* ModelWithLosses.swift */; };
+		26CA76A52A9C58A6002639EF /* OryxManufacturer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CA76A42A9C58A6002639EF /* OryxManufacturer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +76,9 @@
 		26A4C18B2A9B978C003C7F26 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		26A4C18D2A9B997F003C7F26 /* CalendarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewModel.swift; sourceTree = "<group>"; };
 		26A4C18F2A9B9FA0003C7F26 /* EquipmentDayData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquipmentDayData.swift; sourceTree = "<group>"; };
+		26CA76A02A9C5886002639EF /* Oryx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Oryx.swift; sourceTree = "<group>"; };
+		26CA76A22A9C5892002639EF /* ModelWithLosses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelWithLosses.swift; sourceTree = "<group>"; };
+		26CA76A42A9C58A6002639EF /* OryxManufacturer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OryxManufacturer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,13 +154,16 @@
 		2636A4312A99FFD700AC93CC /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				2636A4482A9A21B700AC93CC /* TotalPersonnelModel.swift */,
-				2636A4322A9A007B00AC93CC /* EquipmentModel.swift */,
 				2636A4382A9A04B300AC93CC /* EquipmentCorrectionModel.swift */,
-				2636A4342A9A049400AC93CC /* PersonnelModel.swift */,
-				2636A4362A9A04A200AC93CC /* EquipmentOryxModel.swift */,
-				26A4C1852A9B2EA8003C7F26 /* OryxType.swift */,
 				26A4C18F2A9B9FA0003C7F26 /* EquipmentDayData.swift */,
+				2636A4322A9A007B00AC93CC /* EquipmentModel.swift */,
+				2636A4362A9A04A200AC93CC /* EquipmentOryxModel.swift */,
+				26CA76A22A9C5892002639EF /* ModelWithLosses.swift */,
+				26CA76A02A9C5886002639EF /* Oryx.swift */,
+				26CA76A42A9C58A6002639EF /* OryxManufacturer.swift */,
+				26A4C1852A9B2EA8003C7F26 /* OryxType.swift */,
+				2636A4342A9A049400AC93CC /* PersonnelModel.swift */,
+				2636A4482A9A21B700AC93CC /* TotalPersonnelModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -325,6 +334,7 @@
 			files = (
 				2636A4412A9A06C500AC93CC /* OryxView.swift in Sources */,
 				26A4C1902A9B9FA0003C7F26 /* EquipmentDayData.swift in Sources */,
+				26CA76A52A9C58A6002639EF /* OryxManufacturer.swift in Sources */,
 				2636A44C2A9A2B4800AC93CC /* Images.swift in Sources */,
 				26A4C18C2A9B978C003C7F26 /* CalendarView.swift in Sources */,
 				2636A4452A9A06E100AC93CC /* OryxViewModel.swift in Sources */,
@@ -338,9 +348,11 @@
 				263BB0632A9BB96C008172FB /* Colors.swift in Sources */,
 				26A4C1862A9B2EA9003C7F26 /* OryxType.swift in Sources */,
 				2636A4352A9A049400AC93CC /* PersonnelModel.swift in Sources */,
+				26CA76A12A9C5886002639EF /* Oryx.swift in Sources */,
 				26A4C1892A9B77A1003C7F26 /* DetailsView.swift in Sources */,
 				2636A43C2A9A04CA00AC93CC /* String+Extensions.swift in Sources */,
 				2636A4492A9A21B700AC93CC /* TotalPersonnelModel.swift in Sources */,
+				26CA76A32A9C5892002639EF /* ModelWithLosses.swift in Sources */,
 				2636A4082A99FF5200AC93CC /* SmashedByThePawApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

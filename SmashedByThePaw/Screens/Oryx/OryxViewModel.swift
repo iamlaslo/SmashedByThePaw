@@ -35,17 +35,6 @@ final class OryxViewModel: ObservableObject {
     
     // MARK: - Public
     
-    // For testing purposes only
-    #if DEBUG
-        public func setup(equipment: [EquipmentModel]) {
-            self.equipment = equipment
-        }
-        
-        public func setup(oryx: Oryx) {
-            self.oryx = oryx
-        }
-    #endif
-    
     public func todayCount(for oryxType: OryxType) -> Int? {
         oryxType.equipmentCount(for: self.equipment.last)
     }
@@ -67,6 +56,17 @@ final class OryxViewModel: ObservableObject {
     public func oryx(for type: OryxType) -> [EquipmentOryxModel] {
         self.oryx?.data.filter { $0.equipmentType == type } ?? []
     }
+    
+    // For testing purposes only
+    #if DEBUG
+        public func setup(equipment: [EquipmentModel]) {
+            self.equipment = equipment
+        }
+        
+        public func setup(oryx: Oryx) {
+            self.oryx = oryx
+        }
+    #endif
     
     // MARK: - Private
     

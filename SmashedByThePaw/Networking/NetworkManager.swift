@@ -8,7 +8,6 @@
 import Foundation
 
 struct NetworkManager {
-    
     enum Endpoint: String {
         static let base = "https://raw.githubusercontent.com/MacPaw/2022-Ukraine-Russia-War-Dataset/main/data/"
         

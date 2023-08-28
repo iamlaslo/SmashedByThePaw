@@ -29,13 +29,6 @@ final class CalendarViewModel: ObservableObject {
     
     // MARK: - Public
     
-    // For testing purposes only
-    #if DEBUG
-        public func setup(equipment: [EquipmentModel]) {
-            self.equipment = equipment
-        }
-    #endif
-    
     public func equipment(for selectedDate: Date) -> [EquipmentDayData] {
         if let currentDay = self.equipment.first(where: { $0.date?.formatted(date: .abbreviated, time: .omitted) == selectedDate.formatted(date: .abbreviated, time: .omitted)}),
             let yesterday = Calendar.current.date(byAdding: .day, value: -1, to: selectedDate),
@@ -46,6 +39,13 @@ final class CalendarViewModel: ObservableObject {
             return []
         }
     }
+    
+    // For testing purposes only
+    #if DEBUG
+        public func setup(equipment: [EquipmentModel]) {
+            self.equipment = equipment
+        }
+    #endif
     
     // MARK: - Private
     

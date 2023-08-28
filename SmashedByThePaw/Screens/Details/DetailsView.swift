@@ -28,35 +28,42 @@ struct DetailsView: View {
     
     var body: some View {
         ZStack {
-            LinearGradient(
-                colors: [.custom.lightGreen, .custom.midGreen],
-                startPoint: .top,
-                endPoint: .bottom
-            )
-                .ignoresSafeArea()
-            
-            List {
-                ForEach(Array(self.filteredModels.keys), id: \.self) { key in
-                    Section {
-                        if let country = self.filteredModels[key] {
-                            ForEach(country.sorted(by: { $0.model < $1.model })) { model in
-                                self.cell(for: model)
-                            }
-                        } else {
-                            EmptyView()
-                        }
-                    } header: {
-                        Text(key.title)
-                            .font(.title)
-                            .foregroundColor(.white)
-                    }
-                }
-            }
-            .listStyle(.plain)
+            self.backgroundGradientView
+            self.listView
         }
     }
     
     // MARK: - Views
+    
+    private var backgroundGradientView: some View {
+        LinearGradient(
+            colors: [.custom.lightGreen, .custom.midGreen],
+            startPoint: .top,
+            endPoint: .bottom
+        )
+            .ignoresSafeArea()
+    }
+    
+    private var listView: some View {
+        List {
+            ForEach(Array(self.filteredModels.keys), id: \.self) { key in
+                Section {
+                    if let country = self.filteredModels[key] {
+                        ForEach(country.sorted(by: { $0.model < $1.model })) { model in
+                            self.cell(for: model)
+                        }
+                    } else {
+                        EmptyView()
+                    }
+                } header: {
+                    Text(key.title)
+                        .font(.title)
+                        .foregroundColor(.white)
+                }
+            }
+        }
+        .listStyle(.plain)
+    }
     
     private func cell(for model: ModelWithLosses) -> some View {
         HStack {
