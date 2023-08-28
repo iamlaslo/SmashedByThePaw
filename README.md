@@ -1,5 +1,16 @@
 # SmashedByThePaw
 
+**What must be done to prepare the project for publishing:**
+- Localization
+- Adaptation for iPad and Mac
+- Accessibility
+- Buy icons for commercial use
+- Make and add the real API with fresh data
+- Donates for army
+- Hire a designer to make new UI 🤓
+- Make widgets with stats
+- Implement data caching
+
 THE SOFTWARE IS PROVIDED "AS IS"WITHOUT WARRANTY OF ANY KIND,
 EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
